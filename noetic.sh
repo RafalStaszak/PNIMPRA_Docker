@@ -20,6 +20,7 @@ docker run -it --rm \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --privileged \
 	--volume="/home/$SUDO_USER/Shared:/root/Shared:rw" \
 	--device=/dev/usb \
+	--device=/dev/video0 \
 	--gpus all \
 	--env="XAUTHORITY=$XAUTH" \
 	--volume="$XAUTH:$XAUTH" \
