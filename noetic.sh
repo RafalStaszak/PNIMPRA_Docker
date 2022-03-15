@@ -18,7 +18,7 @@ docker run -it --rm \
 	--env="DISPLAY" \
 	--env="QT_X11_NO_MITSHM=1" \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --privileged \
-	--volume="/home/rafal/Shared:/root/Shared:rw" \
+	--volume="/home/$SUDO_USER/Shared:/root/Shared:rw" \
 	--device=/dev/usb \
 	--gpus all \
 	--env="XAUTHORITY=$XAUTH" \
