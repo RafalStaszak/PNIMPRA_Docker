@@ -10,6 +10,7 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get update -q && \
 	export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y --no-install-recommends apt-utils software-properties-common wget curl rsync netcat mg vim bzip2 zip unzip && \
+    apt-get install -y --no-install-recommends libxtst6 && \
     apt-get install -y --no-install-recommends bash-completion && \
     apt-get install -y --no-install-recommends nano && \ 
     apt-get install -y --no-install-recommends net-tools && \
